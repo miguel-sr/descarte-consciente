@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  background: #00856F;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header #senai-logo {
+  position: relative;
+  width: 181px;
+  height: 62px;
+  float: right;
+  margin: 0 52px 0 0;
+  background: url(../images/senai.svg);
+}
+
+header h1 {
+  display: inline-block;
+  margin: 22px 50px 0 123px;
+  width: 250px;
+  color: #DCE9E2;
+}
+
+h1 {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+p {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+}
+
+#desktop-nav {
+  display: inline-block;
+}
+
+#mobile-nav {
+  display: none;
+}
+
+#desktop-nav .nav-items {
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  text-decoration: none;
+  color: #FFFFFF;
+  opacity: 0.7;
+  padding: 0 15px 0 15px;
+  transition: opacity .25s;
+}
+
+#desktop-nav .nav-items:hover {
+  opacity: 1;
+}
+
+/* ------------- Menu Mobile  ------------- */
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  transform: scale(0.8);
+}
+
+.menu-btn__burger {
+  width: 50px;
+  height: 6px;
+  margin-bottom: 5px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+  transform: translateY(-16px);
+}
+
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+  transform: translateY(16px);
+}
+
+/* Animação Burguer */
+#mobile-nav {
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  z-index: 3;
+  margin-left: 20px;
+}
+
+#mobile-nav.active .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+#mobile-nav.active .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+#mobile-nav.active .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/* ------------- Menu mobile ------------- */
+#mobile-nav nav {
+  background: #00856F;
+  text-align: center;
+  width: 25%;
+  height: 0;
+  overflow-y: hidden;
+  position: absolute;
+  top: 70px;
+  left: 0px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 0 0 25px 0;
+  transition: 0.5s;
+}
+
+#mobile-nav nav a {
+  text-decoration: none;
+  display: block;
+  color: #fff;
+}
+
+#mobile-nav.active nav {
+  height: 250px;
+  overflow-y: auto;
+}
+
+#hero-section {
+  height: 608px;
+  background: #DCE9E2;
+}
+
+#hero-section #hero-text {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 25px;
+  text-align: center;
+}
+
+#hero-section #hero-text h1:last-of-type {
+  width: 394px;
+  padding-top: 30px;
+  margin: 0 auto;
+  height: 136px;
+  font-size: 52px;
+  line-height: 130%;
+  color: #212529;
+}
+
+#hero-section #hero-text p {
+  width: 585px;
+  margin: 0 auto;
+  padding-top: 60px;
+  height: 54px;
+  font-size: 18px;
+  line-height: 150%;
+  color: #495057;
+}
+
+#hero-section #info {
+  background: #FFFAF1;
+  border: 2px solid #DCE9E2;
+  border-radius: 10px;
+  width: 1120px;
+  height: 210px;
+  display: flex;
+  position: absolute;
+  top: 570px;
+  left: 50%;
+  margin-left: -560px;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero-section #info div {
+  width: 33%;
+}
+
+#hero-section #info h1 {
+  font-size: 48px;
+  line-height: 130%;
+  text-align: center;
+}
+
+#hero-section #info p {
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+}
+
+#services-section {
+  width: 100%;
+  height: 1082px;
+  background: #F7F9F9;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#services-section #heat-text {
+  position: relative;
+  width: 82px;
+  height: 21px;
+  margin: 0 auto;
+  padding: 30px 0;
+  top: 159px;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.08em;
+  color: #00856F;
+}
+
+#services-section #title {
+  position: relative;
+  width: 497px;
+  margin: 0 auto;
+  top: 207px;
+  font-size: 40px;
+  line-height: 52px;
+  color: #212529;
+}
+
+#services-section #cards-container {
+  position: relative;
+  width: 100%;
+  height: 454px;
+  margin: 0 auto;
+  top: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#services-section .card {
+  background: #FFFFFF;
+  border: 1px solid #DCE9E2;
+  border-radius: 10px;
+  width: 25%;
+  padding: 24px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+#services-section .card h1 {
+  font-size: 24px;
+  line-height: 31px;
+  text-align: center;
+}
+
+#services-section .card p {
+  font-size: 16px;
+  line-height: 150%;
+}
+
+#aboutus-section {
+  width: 100%;
+  height: 734px;
+  background: #DCE9E2;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#aboutus-section > h1 {
+  position: relative;
+  width: 89px;
+  top: 203px;
+  margin: 0 auto;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: #00856F;
+}
+
+#aboutus-section #text {
+  position: relative;
+  width: 570px;
+  height: 104px;
+  margin: 0 auto;
+  top: 234px;
+  text-align: center;
+}
+
+#aboutus-section #text h1 {
+  font-size: 40px;
+  line-height: 52px;
+  color: #212529;
+  padding-bottom: 20px;
+}
+
+#aboutus-section #text p {
+  font-size: 16px;
+  line-height: 150%;
+  color: #495057;
+}
+
+#feed-section {
+  width: 100%;
+  height: 100%;
+  background: #F7F9F9;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+#feed-section .cards {
+  background: #FFFFFF;
+  border: 1px solid #DCE9E2;
+  border-radius: 10px;
+  width: 25%;
+  margin: 15px;
+  aspect-ratio: 1/1;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#feed-section .cards h1 {
+  font-size: 48px;
+  line-height: 130%;
+  color: #212529;
+}
+
+#feed-section .cards p {
+  font-size: 16px;
+  line-height: 150%;
+  width: 90%;
+  text-align: center;
+  color: #00856F;
+}
+
+
+#feed-section .cards:nth-child(1) {
+  background-image: url(../images/image1.webp);
+}
+
+#feed-section .cards:nth-child(3) {
+  background-image: url(../images/image2.jpg);
+}
+
+#feed-section .cards:nth-child(4) {
+  background-image: url(../images/image3.jpg);
+}
+
+#feed-section .cards:nth-child(6) {
+  background-image: url(../images/image4.jpg);
+}
+
+#feed-section .cards:nth-child(7) {
+  background-image: url(../images/image5.png);
+}
+
+#feed-section .cards:nth-child(9) {
+  background-image: url(../images/image6.jpg);
+}
+
+footer {
+  width: 100%;
+  height: 70px;
+  background: #00856F;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* ------------- Breakpoints ------------- */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+  header h1 {
+    display: none;
+  }
+
+  #desktop-nav {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: inline-block;
+    margin-top: 30px;
+  }
+
+  #hero-section #hero-text {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  #services-section #title {
+    text-align: center;
+    width: 340px;
+    font-size: 30px;
+  }
+
+  #feed-section .cards h1 {
+    font-size: 30px;
+  }
+
+  #hero-section #info {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+  }
+
+  #hero-section #hero-text h1:last-of-type {
+    width: 100%;
+    font-size: 40px;
+  }
+
+  #services-section {
+    height: 1900px;
+  }
+
+  #services-section .card {
+    width: 80%;
+  }
+
+  #hero-section #info h1 {
+    font-size: 25px;
+    line-height: 130%;
+    text-align: center;
+  }
+
+  #hero-section #info p {
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+  }
+
+  #hero-section > h1 {
+    margin-left: 30px;
+  }
+  
+  #hero-section #hero-text {
+    text-align: center;
+  }
+
+  #hero-section #hero-text h1 {
+    width: 100%;
+  }
+
+  #hero-section #hero-text p {
+    width: 100%;
+    height: 100%;
+  }
+
+  header #senai-logo {
+    transform: scale(0.8);
+    margin: 0px 0px 0 0;
+  }
+
+  #aboutus-section #text {
+    width: 75%;
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #feed-section .cards {
+    width: 80%;
+  }
+}
+
+/* Small devices (lanscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 768.98px) {
+  
+  header h1 {
+    display: none;
+  }
+
+  #desktop-nav {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: inline-block;
+    margin-top: 30px;
+  }
+
+  #hero-section #hero-text {
+    margin: 0 auto;
+    width: 70%;
+  }
+
+  #feed-section .cards {
+    width: 29%;
+  }
+
+  #feed-section .cards h1 {
+    font-size: 30px;
+  }
+
+  #hero-section #info {
+    width: 530px;
+    margin-left: -265px;
+  }
+
+  #services-section {
+    height: 1220px;
+  }
+
+  #services-section .card {
+    width: 42%;
+  }
+
+  #hero-section #info div {
+    width: 33%;
+  }
+
+  #hero-section #info h1 {
+    font-size: 35px;
+    line-height: 130%;
+    text-align: center;
+  }
+
+  #hero-section #info p {
+    font-size: 13px;
+    line-height: 150%;
+    text-align: center;
+  }
+
+  #hero-section > h1 {
+    margin-left: 30px;
+  }
+  
+  #hero-section #hero-text {
+    text-align: center;
+  }
+
+  #hero-section #hero-text h1 {
+    width: 100%;
+  }
+
+  #hero-section #hero-text p {
+    width: 100%;
+  }
+
+  header #senai-logo {
+    transform: scale(0.8);
+    margin: 0px 0px 0 0;
+  }
+
+  #aboutus-section #text {
+    width: 75%;
+    float: none;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #feed-section .cards {
+    width: 43%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 769px) and (max-width: 991.98px) {
+  header h1 {
+    margin: 22px 50px 0px 30px;
+  }
+
+  header #senai-logo {
+    margin: 0 30px 0 0;
+  }
+
+  #desktop-nav {
+    display: none;
+  }
+
+  #mobile-nav {
+    display: inline-block;
+  }
+
+  #feed-section .cards {
+    width: 29%;
+  }
+
+  #feed-section .cards h1 {
+    font-size: 30px;
+  }
+
+  #hero-section #info {
+    width: 700px;
+    margin-left: -350px;
+  }
+
+  #hero-section #info div {
+    width: 31%;
+  }
+
+  #hero-section #info h1 {
+    font-size: 40px;
+    line-height: 130%;
+    text-align: center;
+  }
+
+  #hero-section #info p {
+    font-size: 15px;
+    line-height: 150%;
+    text-align: center;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  header h1 {
+    margin: 22px 50px 0px 30px;
+  }
+
+  header #senai-logo {
+    margin: 0 30px 0 0;
+  }
+
+  #hero-section #info div {
+    width: 27%;
+  }
+
+  #feed-section .cards {
+    width: 30%;
+  }
+
+  #feed-section .cards h1 {
+    font-size: 42px;
+  }
+
+  #hero-section #info {
+    width: 900px;
+    margin-left: -450px;
+  }
+}
